@@ -28,6 +28,17 @@ def MergeSort(arrayList): #Runs the Merge Sort Algorithm Functions
             j+=1
       
          k+=1
+      
+      #check for any leftover variables
+      while i < len(left):
+         arrayList[k] = left[i]
+         i+=1
+         k+=1
+      
+      while j < len(right):
+         arrayList[k] = right[j]
+         j+=1
+         k+=1
 
    
 #----Main Code----#
