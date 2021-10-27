@@ -34,16 +34,12 @@ def main():
 
     array_100 = [random.randint(0, 10**10) for i in range(0,100)] #generates random numbered list to 100
 
-    print(array_100[1])
-
     MergeSort(array_100) #Sort array
-
-    print(array_100[1])
 
     #Grab Random Integers for value finding. 2 for array, 1 not in array
     rand1 = random.randint(0,100)
     rand2 = random.randint(0,100)
-    rand3 = random.randint(0,100)
+    rand3 = random.randint(0,10**10)
 
     #Set Values for Find Variables from Random Variables
     find1 = array_100[rand1]
@@ -56,8 +52,6 @@ def main():
     found1 = BinarySearch(array_100, 0, len(array_100) - 1, find1)
     found2 = BinarySearch(array_100, 0, len(array_100) - 1, find2)
     found3 = BinarySearch(array_100, 0, len(array_100) - 1, find3)
-
-    print(found1, found2, found3)
 
     #Print Results
     if found1 is None:
@@ -78,4 +72,4 @@ def main():
     else:
         print("{} exists in Array".format(find3))
 
-main() #Uncomment/Comment to allow/disallow running standalone
+#main() #Uncomment/Comment to allow/disallow running standalone
