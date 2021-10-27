@@ -60,22 +60,22 @@ def main():
     print(found1, found2, found3)
 
     #Print Results
-    if found1 != -1:
-        print("{} exists in Array".format(find1))
-    
-    else:
+    if found1 is None:
         print("{} does not exist in Array".format(find1))
-
-    if found2 != -1:
-        print("{} exists in Array".format(find2))
     
     else:
+        print("{} exists in Array".format(find1))
+
+    if found2 is None:
         print("{} does not exist in Array".format(find2))
     
-    if found3 != -1:
-        print("{} exists in Array".format(find3))
+    else:
+        print("{} exists in Array".format(find2))
+    
+    if found3 is None:
+        print("{} does not exist in Array".format(find3))
     
     else:
-        print("{} does not exist in Array".format(find3))
+        print("{} exists in Array".format(find3))
 
 main() #Uncomment/Comment to allow/disallow running standalone
