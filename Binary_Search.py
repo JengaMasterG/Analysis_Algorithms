@@ -7,11 +7,25 @@ from Merge_Sort import MergeSort
 import random
 
 #---Functions---#
-def BinarySearch(arrayList, find1, find2, find3):
-    if:
+def BinarySearch(arrayList, arrStart, arrLength, findValue):
+    #Check that Array size is larger than 1
+    if arrStart <= arrLength:
+        #Find Middle fo Array
+        arrHalf = int(len(arrayList)*0.5)
+
+        mid = arrayList[arrHalf]
     
-    else:
-        return -1
+        if findValue == mid:
+            return mid
+    
+        elif findValue < mid:
+            return
+
+        elif findValue > mid:
+            return
+
+        else:
+            return -1
 
 
 #----Main Code ----#
@@ -29,12 +43,11 @@ def main():
     rand2 = random.randint(0,100)
     rand3 = random.randint(0,10**10)
 
-    print(rand1, rand2, rand3)
-
+    #Set Values for Find Variables from Random Variables
     find1 = array_100[rand1]
     find2 = array_100[rand2]
     find3 = rand3
 
-    BinarySearch(array_100, find1, find2,find3)
+    BinarySearch(array_100, 0, len(array_100) - 1,find1)
 
 main() #Uncomment/Comment to allow/disallow running standalone
