@@ -13,15 +13,23 @@ random.seed(0)
 #---Running Merge Sort---#
 print("---Running Merge Sort Algorithm----")
 
-mergeArray = [random.randint(0,10**7) for i in range(2**20)] #generates random numbered list to 2 to 20th
+list_16 = [9, 5, 2, 13, 4, 1, 6, 10, 8, 0, 7, 11, 12, 3, 14, 15] #Static list for proof of concept
 
-print (mergeArray[0:5]) #prints inital order of first 5 values
-print (mergeArray[10000:10005]) #prins inital order of values 10000 to 10005
+random_array = [random.randint(0,10**7) for i in range(2**20)] #generates random numbered list to 2 to 20th
 
-mergeSort(mergeArray) #runs merge sort algorithm
+print("Unordered array with 16 variables:", list_16)
 
-print (mergeArray[0:5]) #should be first 5 smallest values
-print (mergeArray[10000:10005]) #should be 5 different values
+mergeSort(list_16)
+
+print("Array after sorting:", list_16)
+
+print ("Randomized Array [0:5]:", random_array[0:5]) #prints inital order of first 5 values
+print ("Randomized Array [10000:10005]:", random_array[10000:10005]) #prins inital order of values 10000 to 10005
+
+mergeSort(random_array) #runs merge sort algorithm
+
+print ("Randomized Array[0:5] after sorting:", random_array[0:5]) #should be first 5 smallest values
+print ("B[10000:10005] after sorting:", random_array[10000:10005]) #should be 5 different values
 
 #---Running Binary Search---#
 print("\n---Running Binary Search Algorithm---")
