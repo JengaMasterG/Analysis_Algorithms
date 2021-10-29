@@ -2,27 +2,27 @@
 #Giovanni Ruggirello
 
 #---THIS CODE WILL NOT RUN WITHOUT Merge_Sort.py---#
-from Merge_Sort import MergeSort
+from Merge_Sort import mergeSort
 
 import random
 
 #---Functions---#
-def BinarySearch(arrayList, arrStart, arrLength, findValue):
+def binarySearch(arrayList, arrStart, arrLength, findValue):
     #Check that Array size is larger than 1
     if arrLength >= arrStart:
         
         #Find Middle fo Array: Take Start of Array Value. Sub max 
 
-        mid = arrStart + (arrLength - arrStart) // 2 #Ex. 0 + (99-0) // 2 = 50 as mid value
+        mid = arrStart + (arrLength - arrStart) // 2 #Ex. 0 + (99-0) // 2 = 49 as mid value
         
         if findValue == arrayList[mid]:
             return mid
     
         elif findValue < arrayList[mid]: #If value is LT mid value, search left side of array
-            return BinarySearch(arrayList, arrStart, mid - 1, findValue)
+            return binarySearch(arrayList, arrStart, mid - 1, findValue)
 
         elif findValue > arrayList[mid]: #If value is GT mid value, search right side of arrray
-            return BinarySearch(arrayList, mid + 1, arrLength, findValue)
+            return binarySearch(arrayList, mid + 1, arrLength, findValue)
 
         else:
             return -1
@@ -34,7 +34,10 @@ def main():
 
     array_100 = [random.randint(0, 10**10) for i in range(0,100)] #generates random numbered list to 100
 
-    MergeSort(array_100) #Sort array
+    mergeSort(array_100) #Sort array
+
+    #Print Array after its sorted
+    print(array_100)
 
     #Grab Random Integers for value finding. 2 for array, 1 not in array
     rand1 = random.randint(0,100)
@@ -49,9 +52,9 @@ def main():
     print("Searching for {}, {}, and {}...".format(find1, find2, find3))
 
     #Find Values via Binary Search
-    found1 = BinarySearch(array_100, 0, len(array_100) - 1, find1)
-    found2 = BinarySearch(array_100, 0, len(array_100) - 1, find2)
-    found3 = BinarySearch(array_100, 0, len(array_100) - 1, find3)
+    found1 = binarySearch(array_100, 0, len(array_100) - 1, find1)
+    found2 = binarySearch(array_100, 0, len(array_100) - 1, find2)
+    found3 = binarySearch(array_100, 0, len(array_100) - 1, find3)
 
     #Print Results
     if found1 is None:
