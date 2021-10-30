@@ -4,7 +4,8 @@
 
 from Merge_Sort import mergeSort
 from Binary_Search import binarySearch
-from Fibonacci_Recursion import fibonacciRecursive
+from Recursion import fibonacciRecursive
+from Recursion import powerRecursive
 import random
 
 #--Establish Random seed---#
@@ -78,9 +79,9 @@ else:
     print("{} exists in Array".format(find3))
 
 #---Running Recursion Algorithm---#
-print("\n---Running Binary Search Algorithm---")
+print("\n---Running Recursion Algorithm(s)---")
 
-n_input = int(input("Please enter a number for Fibonacci sequence: ")) #user input for variable > 0
+n_input = int(input("Please enter a number for Algorithms: ")) #user input for variable > 0
 
 if n_input <= 0: #Error Handling
     print("That is not a valid input!")
@@ -89,3 +90,9 @@ else:
     print("Your Fibonacci Sequence: ")
     for i in range(n_input):
         print(fibonacciRecursive(i))
+
+    print("Sum of n Squared: ")
+    for i in range(n_input):
+        total = powerRecursive(i+1)
+        
+    print(total)

@@ -12,12 +12,11 @@ def fibonacciRecursive(n):
 
 def powerRecursive(n):
 
-    if n <2:
+    if n <1:
         return n
     
     else:
-        sum = n**2 + (n-1)**2
-        return sum
+        return powerRecursive(n-1) + n*n
 
 #---Main Function---#
 def main():
@@ -32,8 +31,11 @@ def main():
         for i in range(n_input):
             print(fibonacciRecursive(i))
         
-        print("Sums of n: ")
+        print("Sum of n Squared: ")
+        
         for i in range(n_input):
-            print(powerRecursive(i))
+            total = powerRecursive(i+1)
+        
+        print(total)
 
-main() #Uncomment/Comment to allow/disallow running standalone
+#main() #Uncomment/Comment to allow/disallow running standalone
