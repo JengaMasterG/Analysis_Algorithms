@@ -92,7 +92,7 @@ else:
         print(fibonacciRecursive(i))
 
     print("Sum of n Squared: ")
-    for i in range(n_input):
-        total = powerRecursive(i+1)
+    
+    total = powerRecursive(n_input)
         
     print(total)
