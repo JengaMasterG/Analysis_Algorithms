@@ -6,6 +6,7 @@ from Merge_Sort import mergeSort
 from Binary_Search import binarySearch
 from Recursion import fibonacciRecursive
 from Recursion import powerRecursive
+from GCD import gcd
 import random
 
 #--Establish Random seed---#
@@ -96,3 +97,16 @@ else:
     total = powerRecursive(n_input)
         
     print(total)
+
+#---Running Greatest Common Denominator Algorithm---#
+a = 24
+b = 55
+
+print("Find GCD of", a, b)
+print(gcd(a,b))
+
+a = 85
+b = 10
+
+print("Find GCD of", a, b)
+print(gcd(a,b))
