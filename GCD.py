@@ -22,4 +22,4 @@ def main():
     print("Find GCD of", a, b)
     print(gcd(a,b))
 
-main() #Uncomment/Comment to allow/disallow running standalone
+#main() #Uncomment/Comment to allow/disallow running standalone
