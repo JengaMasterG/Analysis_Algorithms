@@ -102,6 +102,7 @@ else:
 a = 24
 b = 55
 
+print("\n---Running GCD Algorithm---")
 print("Find GCD of", a, b)
 print(gcd(a,b))
 
